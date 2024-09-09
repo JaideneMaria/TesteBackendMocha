@@ -1,0 +1,8 @@
+create database ecommerce;
+use ecommerce;
+
+CREATE TABLE usuarios (idUsuario INTEGER PRIMARY KEY AUTO_INCREMENT, nomeCliente VARCHAR(255) not null, cpf VARCHAR(11) not null, emailCliente VARCHAR(100) not null, senha VARCHAR(10) not null, tipo TINYINT not null );
+
+CREATE TABLE pedidos ( idPedido INTEGER AUTO_INCREMENT PRIMARY KEY, dataEmissao DATE not null, statusPedido VARCHAR(50) not null, idUsuario INT not null, idProduto INT not null);
+
+CREATE TABLE produtos (idProduto INTEGER PRIMARY KEY AUTO_INCREMENT,  nomeProduto VARCHAR(100) NOT NULL, modelo VARCHAR(100) NOT NULL, marca VARCHAR(30) NOT NULL, preco DECIMAL(6,2) NOT NULL, descricao VARCHAR(500) NOT NULL, quantidade INTEGER, status_disponibilidade VARCHAR(30), categoria VARCHAR(50), fichaTecnica TEXT);
