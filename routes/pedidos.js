@@ -39,7 +39,7 @@ router.post('/', function(req, res) {
     console.log("Dados recebidos no body:", req.body);
     const { dataEmissao, statusPedido, idUsuario, idProduto } = req.body;
 
-    // Verifica se algum dos campos é undefined
+    
     if (!dataEmissao || !statusPedido || !idUsuario || !idProduto) {
         console.log("Erro: Um ou mais campos estão undefined.");
         return res.status(400).send("Erro: Um ou mais campos estão faltando.");

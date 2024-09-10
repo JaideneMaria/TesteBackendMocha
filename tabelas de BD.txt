@@ -6,3 +6,28 @@ CREATE TABLE usuarios (idUsuario INTEGER PRIMARY KEY AUTO_INCREMENT, nomeCliente
 CREATE TABLE pedidos ( idPedido INTEGER AUTO_INCREMENT PRIMARY KEY, dataEmissao DATE not null, statusPedido VARCHAR(50) not null, idUsuario INT not null, idProduto INT not null);
 
 CREATE TABLE produtos (idProduto INTEGER PRIMARY KEY AUTO_INCREMENT,  nomeProduto VARCHAR(100) NOT NULL, modelo VARCHAR(100) NOT NULL, marca VARCHAR(30) NOT NULL, preco DECIMAL(6,2) NOT NULL, descricao VARCHAR(500) NOT NULL, quantidade INTEGER, status_disponibilidade VARCHAR(30), categoria VARCHAR(50), fichaTecnica TEXT);
+
+-- Inserção para um Administrador
+INSERT INTO usuarios (nomeCliente, cpf, emailCliente, senha, tipo) VALUES ('Lucas Almeida', '12345678901', 'lucas.admin@empresa.com', 'senhaSegura123', 'Administrador');
+
+-- Inserções para Clientes
+INSERT INTO usuarios (nomeCliente, cpf, emailCliente, senha, tipo) VALUES ('Mariana Costa', '23456789012', 'mariana.costa@empresa.com', 'senhaSegura123', 'Cliente');
+INSERT INTO usuarios (nomeCliente, cpf, emailCliente, senha, tipo) VALUES ('João Martins', '34567890123', 'joao.martins@empresa.com', 'senhaSegura123', 'Cliente');
+INSERT INTO usuarios (nomeCliente, cpf, emailCliente, senha, tipo) VALUES ('Clara Gonçalves', '45678901234', 'clara.g@empresa.com', 'senhaSegura123', 'Cliente');
+INSERT INTO usuarios (nomeCliente, cpf, emailCliente, senha, tipo) VALUES ('Roberto Silva', '56789012345', 'roberto.silva@empresa.com', 'senhaSegura123', 'Cliente');
+INSERT INTO usuarios (nomeCliente, cpf, emailCliente, senha, tipo) VALUES ('Fernanda Oliveira', '67890123456', 'fernanda.oliveira@empresa.com', 'senhaSegura123', 'Cliente');
+INSERT INTO usuarios (nomeCliente, cpf, emailCliente, senha, tipo) VALUES ('Ricardo Sousa', '78901234567', 'ricardo.sousa@empresa.com', 'senhaSegura123', 'Cliente');
+INSERT INTO usuarios (nomeCliente, cpf, emailCliente, senha, tipo) VALUES ('Juliana Pereira', '89012345678', 'juliana.pereira@empresa.com', 'senhaSegura123', 'Cliente');
+INSERT INTO usuarios (nomeCliente, cpf, emailCliente, senha, tipo) VALUES ('Carlos Eduardo', '90123456789', 'carlos.e@empresa.com', 'senhaSegura123', 'Cliente');
+INSERT INTO usuarios (nomeCliente, cpf, emailCliente, senha, tipo) VALUES ('Patrícia Lima', '01234567890', 'patricia.lima@empresa.com', 'senhaSegura123', 'Cliente');
+
+INSERT INTO pedidos (dataEmissao, statusPedido, idUsuario, idProduto) VALUES ('2023-09-15', 'Processando', 1, 101);
+INSERT INTO pedidos (dataEmissao, statusPedido, idUsuario, idProduto) VALUES ('2023-09-16', 'Enviado', 2, 102);
+INSERT INTO pedidos (dataEmissao, statusPedido, idUsuario, idProduto) VALUES ('2023-09-17', 'Entregue', 3, 103);
+INSERT INTO pedidos (dataEmissao, statusPedido, idUsuario, idProduto) VALUES ('2023-09-18', 'Cancelado', 4, 104);
+INSERT INTO pedidos (dataEmissao, statusPedido, idUsuario, idProduto) VALUES ('2023-09-19', 'Processando', 5, 105);
+INSERT INTO pedidos (dataEmissao, statusPedido, idUsuario, idProduto) VALUES ('2023-09-20', 'Enviado', 1, 106);
+INSERT INTO pedidos (dataEmissao, statusPedido, idUsuario, idProduto) VALUES ('2023-09-21', 'Entregue', 2, 107);
+INSERT INTO pedidos (dataEmissao, statusPedido, idUsuario, idProduto) VALUES ('2023-09-22', 'Cancelado', 3, 108);
+INSERT INTO pedidos (dataEmissao, statusPedido, idUsuario, idProduto) VALUES ('2023-09-23', 'Processando', 4, 109);
+INSERT INTO pedidos (dataEmissao, statusPedido, idUsuario, idProduto) VALUES ('2023-09-24', 'Enviado', 5, 110);

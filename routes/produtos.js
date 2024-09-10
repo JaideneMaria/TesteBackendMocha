@@ -45,13 +45,13 @@ router.put('/:idProduto', async (req, res) => {
     const { nomeProduto, modelo, marca, preco, descricao, quantidade, status_disponibilidade, categoria, fichaTecnica } = req.body;
     
     try {
-        // Primeiro, verifica se o produto existe
+        
         const verificarProduto = await dao.findById(idProduto);
         if (verificarProduto[0].length === 0) {
             return res.status(404).send('Produto não encontrado.');
         }
         
-        // Se existir, prossegue com a atualização
+        
         const result = await dao.update(idProduto, nomeProduto, modelo, marca, preco, descricao, quantidade, status_disponibilidade, categoria, fichaTecnica);
         if (result[0].affectedRows === 0) {
             res.status(404).send('Produto não encontrado para atualização.');

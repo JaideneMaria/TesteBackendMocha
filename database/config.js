@@ -17,5 +17,5 @@ db.connect(err => {
     console.log('Conectado ao banco de dados MySQL');
 });
 
-// Exportar a conexão do banco de dados
+
 export default db;
