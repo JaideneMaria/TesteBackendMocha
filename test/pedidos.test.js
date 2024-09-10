@@ -6,7 +6,6 @@ import app from '../server.js';
 
 
 
-
 // describe('GET /pedidos', function () {
 //     it('Retornar todos os pedidos', function (done) {
 //         request(app)
@@ -21,20 +20,6 @@ import app from '../server.js';
 //     });
 // });
 
-// describe('GET /produtos/:idProduto', function() {
-//     it('Retornar um produto por ID', function(done) {
-//         const testId = 2; 
-//         request(app)
-//             .get(`/produtos/${testId}`)
-//             .expect('Content-Type', /json/)
-//             .expect(200)
-//             .expect(function(res) {
-//                 console.log("Produto retornado:", res.body);
-//                 expect(res.body).to.have.property('idProduto', testId);
-//             })
-//             .end(done);
-//     });
-// });
 
 // describe('PUT /pedidos/:idPedido', function() {
 //     it('Atualizar um pedido existente', function(done) {

@@ -4,6 +4,26 @@ const expect = chai.expect;
 import request from 'supertest';
 import app from '../server.js';
 
+// describe('GET /produtos/:idProduto', function() {
+//     it('deve retornar um produto por ID', function(done) {
+//         const testId = 2;
+//         request(app)
+//             .get(`/produtos/${testId}`)
+//             .expect('Content-Type', /json/)
+//             .expect(200)
+//             .expect(function(res) {
+//                 console.log("Produto retornado:", res.body);
+//                 expect(res.body).to.have.property('idProduto', testId);
+//             })
+//             .end(done);
+//     });
+// });
+
+
+
+
+
+
 
 describe('DELETE /produtos/:idProduto', function () {
     it('deve remover um produto', function (done) {
@@ -24,3 +44,4 @@ describe('DELETE /produtos/:idProduto', function () {
             .end(done);
     });
 });
+
